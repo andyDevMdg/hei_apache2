@@ -1,1 +1,1 @@
-# Create automatically domain from a list of domain name
+# Create virtualhost automatically from a list of domain name
