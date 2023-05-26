@@ -18,4 +18,4 @@
     file:
       path: /etc/apache2/sites-enabled/000-default.conf
       state: absent
-      
+      notify: apache2 reload
