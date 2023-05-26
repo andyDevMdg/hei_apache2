@@ -2,12 +2,7 @@
   - name: Installation de serveurs Web
     hosts: web
     remote_user: root
-
-  - tasks:
-    - name: Installation de apache2
-      ansible.builtin.apt: 
-        name: apache2
-        update_cache: yes
-        state: latest
-        
+  
+  roles:
+    - apache2
 ...
