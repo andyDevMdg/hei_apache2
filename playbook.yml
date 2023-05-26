@@ -1,0 +1,9 @@
+---
+  - name: Installation de serveurs Web
+    hosts: web
+    remote_user: root
+
+  - tasks:
+    - name: Installation de apache2
+      apt: name=apache2 update_cache=yes
+...
