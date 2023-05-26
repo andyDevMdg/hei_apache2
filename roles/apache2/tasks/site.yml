@@ -1,0 +1,26 @@
+---
+  - name : Creation de dossier des domaines
+    become: yes
+    file:
+      path: /home/root/{{ domain }}
+      state: directory
+      owner: root
+  
+  - name: Lien vers www
+    become: yes
+    file:
+      src: /home/root/{{ domain }}
+      dest: /var/www/{{ domain }}
+      state: link
+  
+  - name: Création de la configuration apache2
+    template:
+      src: templates/apache2.j2
+      dest: /etc/apache2/sites-available/{{ domain }}
+
+  - name: Activation du domain {{ domain }}
+    file: 
+      src: /etc/apache2/sites-available/{{ domain }}
+      dest: /etc/apache2/sites-enabled/{{ domain }}
+      state: link
+    notify: yes
