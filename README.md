@@ -1,4 +1,7 @@
-# Create server Web automatically on Apache2 from a list of domain name using Ansible
+# Create server Web automatically on Apache2 from a list of domain names using Ansible
+
+## IMPORTANT !
+This will only works on Debian and Ubuntu
 
 ## Prerequisite
 - should be root user or have root privilege
