@@ -38,3 +38,11 @@
     template:
       src: templates/apache2.j2
       dest: /etc/apache2/sites-available/{{ domain }}
+
+  - name: Activation du domain {{ domain }}
+    file: 
+      src: /etc/apache2/sites-available/{{ domain }}
+      dest: /etc/apache2/sites-enabled/{{ domain }}
+      state: link
+    notify: yes
+
