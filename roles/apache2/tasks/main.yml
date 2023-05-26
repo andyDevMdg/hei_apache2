@@ -13,4 +13,9 @@
       state: started
       enabled: true
   
-  
+  - name: Delete default.conf
+    become: yes
+    file:
+      path: /etc/apache2/sites-enabled/000-default.conf
+      state: absent
+      
