@@ -1,5 +1,5 @@
 <VirtualHost *:80>
-    ServerName {{ domains }}
-    ServerAlias {{ domains }}
-    DocumentRoot /var/www/{{ domains }}
+    ServerName {{ item }}
+    ServerAlias {{ item }}
+    DocumentRoot /var/www/{{ item }}
 </VirtualHost>
