@@ -2,6 +2,12 @@
   - name: Installation de serveurs Web
     hosts: web
     remote_user: root
+    vars:
+      domains:
+        - www.hei.school
+        - back.hei.school
+        - front.hei.school
+        - api.hei.school
   
   roles:
     - apache2
