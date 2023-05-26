@@ -1,3 +1,5 @@
-server {
-    server_name www.{{ domain }}
-}
+<VirtualHost *:80>
+    ServerName {{ domains }}
+    ServerAlias {{ domains }}
+    DocumentRoot /var/www/{{ domains }}
+</VirtualHost>
