@@ -5,5 +5,9 @@
 
   - tasks:
     - name: Installation de apache2
-      apt: name=apache2 update_cache=yes
+      ansible.builtin.apt: 
+        name: apache2
+        update_cache: yes
+        state: latest
+        
 ...
