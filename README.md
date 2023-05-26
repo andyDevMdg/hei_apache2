@@ -1,6 +1,11 @@
 # Create server Web automatically on Apache2 from a list of domain name using Ansible
 
-The list of domain name should be provide as a text in this form:
+## Prerequisite
+- should be root user or have root privilege
+- ssh should be installed on your server
+
+## List of domain names
+The list of domain names should be provide as a text in this form:
 
 ```sh
 - www.hei.school
