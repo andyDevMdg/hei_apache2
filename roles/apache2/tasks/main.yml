@@ -22,5 +22,6 @@
 
   - name: Configuration des sites
     include: site.yml
+    with_items: domains
 
 
